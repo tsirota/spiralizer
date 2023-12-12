@@ -20,10 +20,12 @@
 
   // setting global application variables
   var canvas1 = document.getElementById("myCanvas1"); // storing the canvas1 element in a variable
-  var ctx1 = canvas1.getContext("2d"); // storing canvas1 context in a variable
+  var ctx1 = canvas1.getContext("2d", { willReadFrequently: true }); // storing canvas1 context in a variable
+
+
 
   var canvas2 = document.getElementById("myCanvas2"); // storing the canvas2 element in a variable
-  var ctx2 = canvas2.getContext("2d"); // storing canvas2 context in a variable
+  var ctx2 = canvas2.getContext("2d", { willReadFrequently: true }); // storing canvas2 context in a variable
 
   var stopAnimation=false; //stop animation flag
   var cSeg = 0; // the current line segment being drawn.
@@ -211,7 +213,7 @@
       const newCanvas = document.createElement("canvas");  // creating a new canvas element
       newCanvas.width = 500; // setting the width
       newCanvas.height = 500; // setting the height
-      const newCtx = newCanvas.getContext("2d"); //getting the context
+      const newCtx = newCanvas.getContext("2d", { willReadFrequently: true }); //getting the context
 
       newCtx.drawImage(canvas2, 0, 0); // drawing the content of Canvas2 onto the new canvas
 
