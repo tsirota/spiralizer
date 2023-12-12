@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spiralizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+
+    <table id = "savedItems">
+      <tr>
+        <td>
+          <h2>Settings</h2>
+        </td>
+        <td>
+          <h2>Base Image</h2>
+        </td>
+        <td>
+          <h2>Spiralized Image</h2>
+        </td>
+    
+      </tr>
+
+      <br>
+      <br>
+      <tr>
+        <td>
+          <form id="myForm">
+
+            <label for="imageLoader"><b> Upload Image </b><i id="errorM1" hidden> Please Upload a File </i></label>
+            
+            <input type="file" id="imageLoader" name="imageLoader" accept="image/png, image/gif, image/jpeg, image/webp"/>
+            <br>
+            <br>
+
+            <label for="lineColor"><b>Line Color: </b><b id="cColor">#000000</b></label>
+            <input type="color" id="lineColor" name="lineColor" value="#000000"/><br /><br />
+
+            <label for="radius"><b>Spiral Radius: </b><b id="cRadius">1</b></label>
+            <input id="radius" type="range" value="1" min="1" max="5"/>
+
+            <label for="thickness"><b>Spiral Thickness: </b><b id="cThickness">1</b></label>
+            <input id="thickness" type="range" value="1" min="1" max="5"/>
+
+            <button id="draw" type="submit">Draw</button>
+
+            <button id="clearI" type="button" >Clear Drawing</button>
+
+            <button id="saveD" type="button" >Save Drawing</button>
+            <br>
+
+          </form>
+        </td>
+        <td>
+          <canvas id="myCanvas1" width="500" height="500" >
+          </canvas>
+        </td>
+        <td>
+          <canvas id="myCanvas2" width="500" height="500">
+          </canvas>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"><h2>Saved Drawings</h2>
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
